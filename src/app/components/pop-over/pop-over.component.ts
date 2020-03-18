@@ -40,6 +40,6 @@ export class PopOverComponent {
 	toggleSelected(category: Category, event: Event): void {
 		category.selected = !category.selected;
 
-		event.stopPropagation()
+		event.stopPropagation();
 	}
 }
