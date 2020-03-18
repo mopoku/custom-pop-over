@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-
-# custom-pop-over
+# Custom Pop Over
 Custom pop over selector for displaying different categories and their items
 
 After cloning:
