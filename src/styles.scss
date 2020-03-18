@@ -8,6 +8,13 @@ button, label {
     letter-spacing: 0.5px;
 }
 
+div.menu-content-container.category-menu {
+    
+    button { 
+        padding-right: 26px;
+    }
+}
+
 div.menu-content-container div.mat-menu-content {
     label  { margin-bottom: 0; }
     button {

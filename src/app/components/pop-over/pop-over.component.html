@@ -12,7 +12,7 @@
             categories
             <mat-icon [ngStyle]="{'color':'black'}" aria-hidden="false" aria-label="Arrow Drop Down">arrow_drop_down</mat-icon>
         </button>
-        <mat-menu #menu="matMenu" xPosition="before" [class]="'menu-content-container'">
+        <mat-menu #menu="matMenu" xPosition="before" [class]="'menu-content-container category-menu'">
             <button (click)="toggleSelected(category, $event)" mat-menu-item *ngFor="let category of categorySelections">
                 <mat-icon  aria-hidden="false" aria-label="Selected">{{ category.selected ? 'done' : '' }}</mat-icon>
                 {{ category.name }}
