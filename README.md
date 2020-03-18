@@ -4,4 +4,4 @@ Custom pop over selector for displaying different categories and their items. Th
 After cloning:
 1) run "npm install"
 2) run "npm start"
-3) Open a browser and navigate to
+3) Open a browser and navigate to http://localhost:4200
