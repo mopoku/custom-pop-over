@@ -1,0 +1,25 @@
+<div class="quantity-counter-container">
+    <button #menuTrigger="matMenuTrigger" mat-button [matMenuTriggerFor]="menu" (menuOpened)="init()">
+        {{ categoryCount > 0 ? categoryCount + ' ' : '' }}{{ category.name }}
+        <mat-icon [ngStyle]="{'color':'black'}"aria-hidden="false" aria-label="Arrow Drop Down">arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu [class]="'menu-content-container'"  #menu="matMenu">
+        <ul (click)="$event.stopPropagation()">
+            <li class="category-item" *ngFor="let item of editCategory.items" class="category-item">
+                <label class="item-name">{{ item.name }}</label>
+               <div class="count-button-group flex-row-align-center">
+                    <button [disabled]="item.count === 0" 
+                        (click)="item.count > 0 ? updateItem(item, -1, $event) : null"
+                        class="reduce-item">&ndash;</button>
+                    <label class="item-count">{{ item.count }}</label>
+                    <button class="add-item"
+                        (click)="updateItem(item, 1, $event)">+</button>
+               </div>
+            </li>
+        </ul>
+        <div class="execute-button-group flex-row">
+            <button (click)="menuTrigger.closeMenu()" class="cacnel-button">Cancel</button>
+            <button [disabled]="!edited" (click)="done();menuTrigger.closeMenu()" class="done-button">Done</button>
+        </div>
+    </mat-menu>
+</div>

@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+@import './common';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+button, label {
+    letter-spacing: 0.5px;
+}
+
+div.menu-content-container div.mat-menu-content {
+    label  { margin-bottom: 0; }
+    button {
+        color: $textColor;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0;
+        min-width: 190px;
+
+
+        li.category-item {
+            padding-bottom: 20px;
+            @include flexRow();
+
+            label.item-name {
+                color: $textColor;
+                align-self: center;
+            }
+
+            div.count-button-group {
+                margin-left: auto;
+                justify-content: space-between;
+                min-width: 85px;
+
+                label.item-count {
+                    color: $textColor;
+                    align-self: center;
+                }
+
+                button.add-item, button.reduce-item {
+                    font-size: 20px;
+                    border-radius: 4px;
+                    background-color: #add8e6;
+                    color: #00008B;
+                    opacity: 0.65;
+                    border: none;
+                    outline: none;
+                }
+
+                button.reduce-item:disabled {
+                    opacity: 0.3;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    div.execute-button-group {
+        justify-content: flex-end;
+        padding-right: 10px;
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            padding-right: 0;
+            outline: none;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+        }
+
+        button.cancel-button {
+            color: #D3D3D3;
+        }
+
+        button.done-button {
+            color: #00008B;
+            margin-left: 25px;
+        }
+    }
+}

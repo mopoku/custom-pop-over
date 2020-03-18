@@ -1,0 +1,18 @@
+div.pop-over {
+    margin-left: auto;
+    border-radius: 4px;
+    max-width: 700px;
+    min-width: 100px;
+    padding: 20px;
+    box-shadow: 3px 5px 14px 1px #C9C9C9;
+
+    div.category-selector {
+        flex-grow: 1;
+        text-align: right;
+        margin-left: 80px;
+
+        button.category-selector-trigger {
+            color: #FF0000;
+        }
+    }
+}

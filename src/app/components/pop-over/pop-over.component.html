@@ -1,0 +1,23 @@
+<div class="pop-over flex-inline-row-align-center">
+    <div class="category-counts flex-row">
+        <ng-container *ngFor="let category of categorySelections">
+            <app-quantity-counter *ngIf="category.selected"
+                [category]="category"
+                (doneEditing)="updateCategory($event)">
+            </app-quantity-counter>
+        </ng-container>
+    </div>
+    <div class="category-selector">
+        <button class="category-selector-trigger" mat-button [matMenuTriggerFor]="menu">
+            categories
+            <mat-icon [ngStyle]="{'color':'black'}" aria-hidden="false" aria-label="Arrow Drop Down">arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before" [class]="'menu-content-container'">
+            <button (click)="toggleSelected(category, $event)" mat-menu-item *ngFor="let category of categorySelections">
+                <mat-icon  aria-hidden="false" aria-label="Selected">{{ category.selected ? 'done' : '' }}</mat-icon>
+                {{ category.name }}
+            </button>
+        </mat-menu>
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+$textColor: #4E4E4E;
+
+@mixin flexInlineRow {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row {
+    @include flexRow();
+}
+
+.flex-row-align-center {
+    @include flexRow();
+    align-items: center;
+}
+
+.flex-inline-row {
+    @include flexInlineRow();
+}
+
+.flex-inline-row-align-center {
+    @include flexInlineRow();
+    align-items: center;
+}
