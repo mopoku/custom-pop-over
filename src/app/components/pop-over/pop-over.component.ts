@@ -9,7 +9,6 @@ import { Category } from '../../models/category.model';
 })
 export class PopOverComponent {
 
-	// hasSelections: boolean;
 	categorySelections: Array<Category>;
 
 	constructor(
